@@ -1,12 +1,17 @@
+import { routes } from "./routes";
+
 const express = require('express');
 const http = require('http');
 const cors = require('cors');
 const { Server } = require('socket.io');
 
-const app = express();
-app.use(cors());
+const PORT = 8080;
 
-const server = http.createServer(app);
+const app = express();
+const server = http.createServer(app)
+app.use(cors());
+app.use(routes);
+
 const io = new Server(server, {
   cors: {
     origin: '*',
@@ -14,19 +19,10 @@ const io = new Server(server, {
   },
 });
 
-app.get('/', (req, res) => {
-  res.sendFile(`${__dirname}/index.html`);
-});
-
-app.get('/test', (req, res) => {
-  res.send('Hello World');
+server.listen(PORT, () => {
+  console.log(`Listening on port ${PORT}`);
 });
 
 io.on('connection', (socket) => {
   console.log('A user connected');
-});
-
-const PORT = 8080;
-server.listen(PORT, () => {
-  console.log(`Listening on port ${PORT}`);
 });
