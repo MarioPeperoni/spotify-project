@@ -4,9 +4,12 @@ import { FaPlayCircle, FaPauseCircle } from "react-icons/fa";
 
 const SongText = () => {
   const [song, setSong] = useState<Song>({
-    name: "Song Name",
-    imageUrl: "https://via.placeholder.com/150",
-    previewAudio: new Audio(""),
+    name: "Kinol - Sobel",
+    imageUrl:
+      "https://i.scdn.co/image/ab67616d0000b273f92ecef77f22321175f71ff4",
+    previewAudio: new Audio(
+      "https://p.scdn.co/mp3-preview/5210a693d14e451ac43abde50e944c58bdad55e4?cid=cfe923b2d660439caf2b557b21f31221",
+    ),
   });
   const [isPreviewOpen, setIsPreviewOpen] = useState<boolean>(false);
   const [isSongPlaying, setIsSongPlaying] = useState<boolean>(false);
