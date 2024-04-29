@@ -9,4 +9,10 @@ type Message = {
   message: string;
 };
 
+type Song = {
+  name: string;
+  imageUrl: string;
+  previewAudio: HTMLAudioElement;
+};
+
 type Point = { x: number; y: number };
