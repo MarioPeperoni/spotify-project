@@ -4,4 +4,9 @@ type Draw = {
   prevPoint: Point | null;
 };
 
+type Message = {
+  from: string;
+  message: string;
+};
+
 type Point = { x: number; y: number };
