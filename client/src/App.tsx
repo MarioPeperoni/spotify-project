@@ -1,8 +1,10 @@
+import DrawingSection from "./components/DrawingSection";
+
 function App() {
   return (
-    <>
-      <p className=" text-3xl">Yooo</p>
-    </>
+    <section>
+      <DrawingSection />
+    </section>
   );
 }
 
