@@ -43,7 +43,7 @@ const DrawingSection = () => {
       />
       <section className="flex gap-2">
         <ColorSelect setColor={setColor} />
-        <BruchSelect setBrushSize={setBrushSize} />
+        <BruchSelect setBrushSize={setBrushSize} color={color} />
         <div className="flex items-center rounded-lg border-2 border-neutral-400 p-3 shadow-xl">
           <FaTrashAlt
             className="h-8 w-8 cursor-pointer text-red-800"

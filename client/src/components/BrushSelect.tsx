@@ -1,15 +1,20 @@
 interface BruchSelectProps {
   setBrushSize: (size: number) => void;
+  color: string;
 }
 
-const BruchSelect = ({ setBrushSize }: BruchSelectProps) => {
+const BruchSelect = ({ setBrushSize, color }: BruchSelectProps) => {
   const sizes = [4, 6, 10, 15];
   return (
     <div className="flex items-center justify-around gap-2 rounded-lg border-2 border-neutral-400 p-3 shadow-xl">
       {sizes.map((size) => (
         <div
           key={size}
-          style={{ width: size * 4 + "px", height: size * 4 + "px" }}
+          style={{
+            width: size * 4 + "px",
+            height: size * 4 + "px",
+            background: color,
+          }}
           className="cursor-pointer rounded-full bg-white"
           onClick={() => setBrushSize(size)}
         />
