@@ -1,7 +1,11 @@
 import { useState } from "react";
+
 import { useDraw } from "../hooks/useDraw";
+
 import ColorSelect from "./ColorSelect";
 import BruchSelect from "./BrushSelect";
+import SongText from "./SongText";
+
 import { FaTrashAlt } from "react-icons/fa";
 
 const DrawingSection = () => {
@@ -28,7 +32,8 @@ const DrawingSection = () => {
   }
 
   return (
-    <div className=" flex flex-col items-center gap-4">
+    <div className=" flex select-none flex-col items-center gap-4">
+      <SongText />
       <canvas
         ref={canvasRef}
         onMouseDown={onMouseDown}

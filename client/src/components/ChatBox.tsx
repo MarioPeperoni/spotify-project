@@ -13,7 +13,7 @@ const ChatBox = () => {
   }, [messages]);
 
   return (
-    <div className="flex h-[908px] w-full flex-col justify-end rounded-lg border-2 border-neutral-400 p-3 shadow-xl xl:w-96">
+    <div className="flex max-h-[992px] w-full flex-col justify-end rounded-lg border-2 border-neutral-400 p-3 shadow-xl xl:w-96">
       <div ref={chatContainerRef} className="h-full overflow-y-auto">
         {messages.map((msg, idx) => (
           <div key={idx} className="my-2 rounded-lg bg-neutral-200 p-2">
