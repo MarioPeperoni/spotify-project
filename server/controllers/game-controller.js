@@ -4,7 +4,7 @@ import { database } from '../db/game-db';
 export const gameRoutes = express.Router();
 
 // user creates game lobby
-gameRoutes.route('/create-game').post(async (req, res) => {
+gameRoutes.route('/game').post(async (req, res) => {
   try {
     // {
     //   name:
